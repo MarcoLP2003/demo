@@ -14,7 +14,7 @@ public class LibroSnapshot {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(nullable = false)
-    private Libro libro;
+    private ItemCarrello item;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(nullable = false)

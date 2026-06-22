@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.apache.catalina.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -23,12 +25,12 @@ public class Carrello {
 
     @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(nullable = false)
-    private User utente;
+    private Utente utente;
 
-    @ManyToMany
+    @ManyToOne
     @Column
-    private Map<Libro, Integer> libriNumero = new HashMap<Libro, Integer>();
+    private List<ItemCarrello> items = new ArrayList<>();
 
-    //CONSIDERARE POSSIBILITA DI CREARE ENTITA INTERMEDIA TRA LIBRO E CARRELLO PER SEGNARE LI LA QUANTITA
-    //CONSIDERARE SOLUZIONI PROBLEMA COLLANA
+    @Version
+    private Long version;
 }

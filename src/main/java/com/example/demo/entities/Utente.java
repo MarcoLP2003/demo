@@ -18,6 +18,9 @@ public class Utente {
     @Column(nullable = false)
     private Long id;
 
+    @Column(nullable = false, unique = true)
+    private String keycloakId;
+
     @Column(nullable = false,  unique = true)
     private String mail;
 

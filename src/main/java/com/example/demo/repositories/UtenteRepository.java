@@ -10,7 +10,9 @@ public interface UtenteRepository extends JpaRepository<Utente, Integer> {
     //serve fare le ricerche per keycloak id (che ancora non so fare)
     List<Utente> findByMail(String mail);
 
-    List<Utente> findById(Long id);
+    Utente findById(Long id);
+
+    Utente findByKeycloakId(String keycloakId);
 
     boolean existsByMail(String mail);
     

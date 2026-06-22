@@ -7,12 +7,16 @@ import java.util.List;
 
 public interface LibroRepository extends JpaRepository<Libro, Long> {
 
-    Libro findByIsbn(int isbn);
+    Libro findByIsbn(Long isbn);
 
     Libro findByTitolo(String titolo);
 
     List<Libro> findByAutore(String autore);
 
+    Libro findByTitoloAndAutore(String titolo, String autore);
+
     List<Libro> findByPrezzo(int prezzo);
+
+    boolean existsByTitoloAndAutore(String titolo, String autore);
 
 }
