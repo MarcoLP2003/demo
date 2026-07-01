@@ -2,7 +2,6 @@ package com.example.demo.controllers;
 
 
 import com.example.demo.DTO.OrdineDTO;
-import com.example.demo.entities.Ordine;
 import com.example.demo.repositories.OrdineRepository;
 import com.example.demo.services.UtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +24,10 @@ public class OrdineController {
     @Autowired
     private UtenteService utenteService;
 
+    /*
     @GetMapping
     public ResponseEntity<List<OrdineDTO>> getOrdiniUtente() {
         //fare keycloak
     }
+    */
 }

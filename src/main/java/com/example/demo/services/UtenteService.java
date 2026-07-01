@@ -67,7 +67,7 @@ public class UtenteService {
     }
 
     //serve un file particolare inserito nel progetto in una cartella "auth", chiamato KeycloakAdminClient
-
+    /*
     public String loginUser(String mail, String password) throws Exception {
         ResponseEntity<String> response = keycloakAdminClient.login(mail, password);
         if (response.getStatusCode() == HttpStatus.OK) {
@@ -76,4 +76,5 @@ public class UtenteService {
             throw new Exception("Login fallito");
         }
     }
+    */
 }
